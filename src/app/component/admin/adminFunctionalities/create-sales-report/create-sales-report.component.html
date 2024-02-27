@@ -1,0 +1,115 @@
+<p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
+  Generate New Sales Report
+</p>
+<div class="form-design">
+  <form #salesReportForm="ngForm">
+    <!-- Date of Sale -->
+    <div class="form-group">
+      <label for="saleDate" style="font-weight: bold">Date of Sale</label>
+      <input
+        type="date"
+        class="form-control"
+        id="saleDate"
+        name="saleDate"
+        #saleDate="ngModel"
+        required
+        [(ngModel)]="data.SaleDate"
+      />
+      <p style="font-style: italic; color: red">It should be a valid date</p>
+      <!-- Display validation error message if the field is invalid -->
+      <div *ngIf="saleDate.invalid && saleDate.touched" style="color: red">
+        Sale Date is required
+      </div>
+    </div>
+
+    <!-- Total Amount -->
+    <div class="form-group">
+      <label for="totalAmount" style="font-weight: bold">Total Amount</label>
+      <input
+        type="text"
+        class="form-control"
+        id="totalAmount"
+        name="totalAmount"
+        #totalAmount="ngModel"
+        required
+        [(ngModel)]="data.TotalAmount"
+      />
+      <p style="font-style: italic; color: red">
+        Total Amount cannot be negative
+      </p>
+      <!-- Display validation error message if the field is invalid -->
+      <div
+        *ngIf="totalAmount.invalid && totalAmount.touched"
+        style="color: red"
+      >
+        Total Amount is required
+      </div>
+    </div>
+
+    <!-- Order ID -->
+    <div class="form-group">
+      <label for="ordersId" style="font-weight: bold">Order ID</label>
+      <input
+        type="text"
+        class="form-control"
+        id="ordersId"
+        name="ordersId"
+        #ordersId="ngModel"
+        required
+        [(ngModel)]="data.OrdersID"
+      />
+      <p style="font-style: italic; color: red">Order ID must be valid</p>
+      <!-- Display validation error message if the field is invalid -->
+      <div *ngIf="ordersId.invalid && ordersId.touched" style="color: red">
+        Order ID is required
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="button-css">
+      <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+        <button
+          type="submit"
+          class="btn btn-primary btn-lg"
+          style="font-weight: bold"
+          (click)="createReport(data)"
+        >
+          Create Report for this order
+        </button>
+      </div>
+    </div>
+    <div class="text-center">
+      <a
+        routerLink="/getAllSalesReports"
+        class="btn btn-success btn-lg"
+        style="font-weight: bold"
+        >All Sales Reports</a
+      >
+      <p>See all the Sales Reports</p>
+    </div>
+
+    <div class="text-center">
+      <a
+        routerLink="/admin"
+        class="btn btn-danger btn-lg"
+        style="font-weight: bold"
+        >Admin Portal</a
+      >
+      <p>Go back to Admin Portal</p>
+    </div>
+  </form>
+
+  <div class="img-container">
+    <div class="image">
+      <div
+        class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2"
+      >
+        <img
+          src="../../../assets/salesReport.png"
+          class="img-fluid"
+          alt="Sample image"
+        />
+      </div>
+    </div>
+  </div>
+</div>

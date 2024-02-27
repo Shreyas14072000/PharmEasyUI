@@ -1,0 +1,61 @@
+<div class="form-container">
+  <form class="email-form">
+    <div class="form-group row">
+      <label
+        for="email"
+        class="col-sm-2 col-form-label"
+        style="font-weight: bold"
+        >Email</label
+      >
+      <div class="col-sm-10">
+        <input
+          type="email"
+          class="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+          required
+          #email
+        />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label
+        for="body"
+        class="col-sm-2 col-form-label"
+        style="font-weight: bold"
+        >Body</label
+      >
+      <div class="col-sm-10">
+        <input
+          type="text"
+          class="form-control"
+          id="body"
+          placeholder="body"
+          #body
+        />
+      </div>
+    </div>
+    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+      <button
+        type="button"
+        class="btn btn-primary btn-lg"
+        (click)="sendEmail(email.value, body.value)"
+      >
+        Send Email
+      </button>
+    </div>
+    <div class="text-center">
+      <a
+        routerLink="/admin"
+        class="btn btn-danger btn-lg"
+        style="font-weight: bold"
+        >Admin Portal</a
+      >
+      <p>Go back to Admin Portal</p>
+    </div>
+  </form>
+
+  <div class="img-reduced">
+    <img src="../../../assets/email.jpg" class="img-fluid" alt="Sample image" />
+  </div>
+</div>

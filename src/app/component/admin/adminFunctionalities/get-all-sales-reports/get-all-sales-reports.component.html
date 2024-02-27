@@ -1,0 +1,55 @@
+<div>
+  <!-- <button class="btn btn-success" (click)="getAllReports()">
+    Fetch All Sales Reports
+  </button> -->
+  <table
+    class="table table-striped table-dark"
+    style="margin-top: 30px"
+    *ngIf="reportList !== null"
+  >
+    <thead>
+      <tr>
+        <th scope="col">Sale ID</th>
+        <th scope="col">Sale Date</th>
+        <th scope="col">Total Amount</th>
+        <th scope="col">Orders ID</th>
+        <th scope="col">Download File</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let report of reportList">
+        <td>{{ report.saleID }}</td>
+        <td>{{ report.saleDate }}</td>
+        <td>{{ report.totalAmount }}</td>
+        <td>{{ report.ordersID }}</td>
+
+        <td>
+          <button class="btn btn-primary" (click)="downloadPdf(report.saleID)">
+            Download PDF
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="text-center">
+    <a routerLink="/getReportById" class="btn btn-primary btn-lg"
+      >Fetch Report by Sale ID</a
+    >
+    <p></p>
+  </div>
+  <div class="text-center">
+    <a routerLink="/getReportByOrderID" class="btn btn-primary btn-lg"
+      >Fetch Report by Order ID</a
+    >
+    <p></p>
+  </div>
+  <div class="text-center">
+    <a
+      routerLink="/admin"
+      class="btn btn-danger btn-lg"
+      style="font-weight: bold"
+      >Admin Portal</a
+    >
+    <p>Go back to Admin Portal</p>
+  </div>
+</div>

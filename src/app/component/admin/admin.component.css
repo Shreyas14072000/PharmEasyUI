@@ -1,0 +1,63 @@
+.admin-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../../../assets/bg.jpg");
+  background-size: cover; /* Adjust this as needed */
+  background-repeat: no-repeat; /* Adjust this as needed */
+  height: 100vh;
+}
+
+.admin-portal-grid {
+  display: grid;
+  grid-template-columns: 140px 140px 140px 140px 140px 140px;
+  column-gap: 30px;
+  row-gap: 30px;
+  margin-bottom: 10px;
+}
+
+.navbar {
+  background-color: #0d3167;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.logout {
+  float: right;
+  padding: 14px 16px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.logo img {
+  height: 80px;
+  width: auto;
+  margin: 0px;
+}
+
+.admin-portal-grid > a {
+  border: 3px solid #333;
+}
+
+.heading {
+  padding: 10px;
+  background: rgb(255, 255, 255);
+  border-radius: 100px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 2px solid #333;
+}
+
+.navbar > button {
+  margin-right: 10px;
+}

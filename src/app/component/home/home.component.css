@@ -1,0 +1,58 @@
+.navbar-flex {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-container > img {
+  width: 90px;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0%;
+}
+
+.icons {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  column-gap: 120px;
+  row-gap: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.icons-container {
+  display: flex;
+  justify-content: center;
+
+  background-image: url("../../../assets/homePortal.jpg");
+  background-size: cover; /* Adjust this as needed */
+  background-repeat: no-repeat; /* Adjust this as needed */
+}
+
+.bottom-bar {
+  background-color: rgb(23, 4, 71);
+  color: rgb(217, 255, 0);
+  padding: 10px 0;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.bottom-bar-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.bottom-bar p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.icons > div {
+  border: 3px solid #333;
+}

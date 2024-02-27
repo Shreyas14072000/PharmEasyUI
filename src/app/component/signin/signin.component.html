@@ -1,0 +1,68 @@
+<div class="signin">
+  <form class="signin-form" #signinForm="ngForm" (ngSubmit)="handleClick()">
+    <div class="mb-3">
+      <label
+        for="exampleInputEmail1"
+        class="form-label"
+        style="font-weight: bold"
+        >Email address</label
+      >
+      <input
+        type="email"
+        class="form-control"
+        name="email"
+        id="exampleInputEmail1"
+        [(ngModel)]="email"
+        required
+        #emailInput="ngModel"
+      />
+      <p style="font-style: italic; color: red">Enter valid Email Address</p>
+      <div
+        class="text-danger"
+        *ngIf="emailInput.invalid && (emailInput.dirty || emailInput.touched)"
+      >
+        Email is required
+      </div>
+    </div>
+    <div class="mb-3">
+      <label
+        for="exampleInputPassword1"
+        class="form-label"
+        style="font-weight: bold"
+        >Password</label
+      >
+      <input
+        type="password"
+        class="form-control"
+        id="exampleInputPassword1"
+        name="password"
+        [(ngModel)]="password"
+        required
+        #passwordInput="ngModel"
+      />
+      <p style="font-style: italic; color: red">Enter Valid Password</p>
+      <div
+        class="text-danger"
+        *ngIf="
+          passwordInput.invalid &&
+          (passwordInput.dirty || passwordInput.touched)
+        "
+      >
+        Password is required
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+    <div class="text-center">
+      <p></p>
+      <a routerLink="/register" class="btn btn-warning btn-lg">Register</a>
+      <p>Don't have an account? Click here to register</p>
+    </div>
+  </form>
+  <div class="img">
+    <img
+      src="../../../assets/userLogin.jpg"
+      class="img-fluid"
+      alt="Sample image"
+    />
+  </div>
+</div>

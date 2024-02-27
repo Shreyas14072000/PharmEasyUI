@@ -1,0 +1,54 @@
+<div>
+  <!-- <button class="btn btn-success" (click)="getAllSuppliers()">
+    Fetch All Suppliers
+  </button> -->
+  <table
+    class="table table-striped table-dark"
+    style="margin-top: 30px"
+    *ngIf="supplierList !== null"
+  >
+    <thead>
+      <tr>
+        <th scope="col">Supplier ID</th>
+        <th scope="col">Supplier Name</th>
+        <th scope="col">Contact Email</th>
+        <th scope="col">Phone Number</th>
+        <th scope="col">Redirect to</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let supplier of supplierList">
+        <td>{{ supplier.supplierID }}</td>
+        <td>{{ supplier.supplierName }}</td>
+        <td>{{ supplier.contactEmail }}</td>
+        <td>{{ supplier.phoneNumber }}</td>
+        <td>
+          <div class="redirect">
+            <button
+              class="btn btn-warning btn-sm"
+              [routerLink]="['/updateSupplier']"
+            >
+              Edit
+            </button>
+            <button
+              class="btn btn-danger btn-sm"
+              [routerLink]="['/deleteSupplier']"
+            >
+              Delete
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="text-center">
+    <a
+      routerLink="/admin"
+      class="btn btn-danger btn-lg"
+      style="font-weight: bold"
+      >Admin Portal</a
+    >
+    <p>Go back to Admin Portal</p>
+  </div>
+</div>

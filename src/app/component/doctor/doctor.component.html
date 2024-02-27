@@ -1,0 +1,80 @@
+<div class="navbar">
+  <div class="logo">
+    <img src="../../../assets/navbarPic.jpg" alt="Image 1" />
+  </div>
+  <button class="btn btn-danger btn-lg" (click)="logout()">Logout</button>
+</div>
+<div class="doctor-container">
+  <div class="heading">
+    <h1
+      style="margin: 10px 0 30px"
+      style="font-weight: bold; font-style: italic"
+    >
+      Doctor Portal
+    </h1>
+  </div>
+
+  <div class="doctor-portal-grid">
+    <a
+      type="button"
+      class="btn btn-success btn-lg"
+      href="/placeNewOrder"
+      style="font-weight: bold"
+    >
+      Place New Order
+    </a>
+    <a
+      type="button"
+      class="btn btn-primary btn-lg"
+      href="/allDrugs"
+      style="font-weight: bold"
+    >
+      Fetch All Drugs
+    </a>
+
+    <a
+      type="button"
+      class="btn btn-primary btn-lg"
+      href="/allSuppliers"
+      style="font-weight: bold"
+    >
+      Fetch All Supplier Details
+    </a>
+
+    <a
+      type="button"
+      class="btn btn-primary btn-lg"
+      href="/searchOrderByDoctorId"
+      style="font-weight: bold"
+    >
+      Find Orders By Doctor ID
+    </a>
+
+    <a
+      type="button"
+      class="btn btn-primary btn-lg"
+      href="/orderTotalAmount"
+      style="font-weight: bold"
+    >
+      Total Amount to be paid
+    </a>
+
+    <a
+      type="button"
+      class="btn btn-primary btn-lg"
+      href="/getDrugByDrugName"
+      style="font-weight: bold"
+    >
+      Search Drug by Drug Name
+    </a>
+
+    <a
+      type="button"
+      class="btn btn-primary btn-lg"
+      href="/getDrugBySupplierId"
+      style="font-weight: bold"
+    >
+      Search Drug by specific Supplier
+    </a>
+  </div>
+</div>

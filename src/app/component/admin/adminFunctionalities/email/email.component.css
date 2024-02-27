@@ -1,0 +1,22 @@
+.form-container {
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.email-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.email-form > div {
+  margin-bottom: 10px;
+}
+
+.img-reduced {
+  margin-left: 30px;
+  width: 300px;
+}
